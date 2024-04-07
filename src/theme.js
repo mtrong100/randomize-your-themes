@@ -10,7 +10,6 @@ export const MY_THEMES = [
   "tokyo night gogh",
   "dark mordern",
   "dracula",
-  "evondev dracula normal contrast",
   "ayu dark bordered",
   "ayu mirage bordered",
   "andromela bordered",

@@ -8,13 +8,28 @@ import {
   Spinner,
   Card,
 } from "@material-tailwind/react";
-import React from "react";
+import React, { useEffect } from "react";
 import { MY_THEMES } from "./theme";
 
 function App() {
   const [currentTheme, setCurrentTheme] = React.useState("");
   const [themeList, setThemeList] = React.useState(MY_THEMES.slice());
   const [randomizing, setRandomizing] = React.useState(false);
+
+  // Effect to load themes from localStorage when component mounts
+  useEffect(() => {
+    const storedThemes = localStorage.getItem("MY_THEMES");
+    if (storedThemes) {
+      setThemeList(JSON.parse(storedThemes));
+    } else {
+      setThemeList(MY_THEMES);
+    }
+  }, []);
+
+  // Effect to update localStorage when themeList changes
+  useEffect(() => {
+    localStorage.setItem("MY_THEMES", JSON.stringify(themeList));
+  }, [themeList]);
 
   const randomizeTheme = () => {
     if (!randomizing && themeList.length > 0) {
@@ -33,7 +48,7 @@ function App() {
       }, 1000);
     } else if (themeList.length === 0) {
       setCurrentTheme("");
-      setThemeList(MY_THEMES);
+      setThemeList(JSON.parse(localStorage.getItem("MY_THEMES")) || MY_THEMES);
     }
   };
 
