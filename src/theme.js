@@ -1,0 +1,18 @@
+export const MY_THEMES = [
+  "github dark",
+  "github dark default",
+  "github dark dimmed",
+  "material theme darkder high contrast",
+  "material theme ocean high contrast",
+  "min dark",
+  "one dark pro darker",
+  "tokyo night altsynt",
+  "tokyo night gogh",
+  "dark mordern",
+  "dracula",
+  "evondev dracula normal contrast",
+  "ayu dark bordered",
+  "ayu mirage bordered",
+  "andromela bordered",
+  "copilot theme",
+];
