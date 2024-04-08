@@ -14,4 +14,5 @@ export const MY_THEMES = [
   "ayu mirage bordered",
   "andromela bordered",
   "copilot theme",
+  "copilot theme high contrast",
 ];
