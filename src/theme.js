@@ -6,8 +6,6 @@ export const MY_THEMES = [
   "material theme ocean high contrast",
   "min dark",
   "one dark pro darker",
-  "tokyo night altsynt",
-  "tokyo night gogh",
   "dark mordern",
   "dracula",
   "ayu dark bordered",
